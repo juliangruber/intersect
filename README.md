@@ -1,6 +1,8 @@
 
 # intersect
 
+[![browser support](https://ci.testling.com/juliangruber/intersect.png)](https://ci.testling.com/juliangruber/intersect)
+
 ## Usage
 
 ```js
@@ -11,6 +13,20 @@ var b = ['nope', 'bar', 'baz'];
 
 console.log(intersect(a, b));
 // => ['bar', 'baz']
+```
+
+## Installation
+
+With [npm](http://npmjs.org) do
+
+```bash
+$ npm install intersect
+```
+
+With [component](https://github.com/component/component) do
+
+```bash
+$ component install juliangruber/intersect
 ```
 
 ## License
