@@ -1,16 +1,13 @@
 module.exports = intersect;
 
 function intersect (a, b) {
-  var res = [];
+  var res = [],
+      temp = {};
   for (var i = 0; i < a.length; i++) {
-    if (indexOf(b, a[i]) > -1) res.push(a[i]);
+    temp[a[i]] = true;
+  }
+  for (var i = 0; i < b.length; i++) {
+      if (temp[b[i]]) res.push(b[i]);
   }
   return res;
-}
-
-function indexOf(arr, el) {
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] === el) return i;
-  }
-  return -1;
 }
