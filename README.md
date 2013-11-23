@@ -29,6 +29,19 @@ With [component](https://github.com/component/component) do
 $ component install juliangruber/intersect
 ```
 
+## Two types of intersect
+
+By passing an options object containing a 'big' key with value 'true':
+
+```js
+intersect(a, b, { big: true })
+```
+
+Intersect can be instructed to utilise an alternate algorithm
+more suitable for calculating the intersection of large sets.
+
+![graph of intersect](http://minuteman3.github.io/minuteman3/graph.svg)
+
 ## License
 
 (MIT)
