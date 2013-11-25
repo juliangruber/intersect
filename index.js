@@ -3,7 +3,7 @@ module.exports = intersect;
 function intersect (a, b) {
   var res = [];
   for (var i = 0; i < a.length; i++) {
-    if (indexOf(b, a[i]) > -1) res.push(a[i]);
+    if (~indexOf(b, a[i])) res.push(a[i]);
   }
   return res;
 }
