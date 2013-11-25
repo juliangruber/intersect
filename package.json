@@ -13,7 +13,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "tape": "~0.3.3"
+    "tape": "~2.3.0"
   },
   "keywords": [
     "intersect",
@@ -25,15 +25,16 @@
     "url": "http://juliangruber.com"
   },
   "license": "MIT",
-  "testling" : {
-    "files" : "test/*.js",
-    "browsers" : [
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
       "ie/6..latest",
       "chrome/20..latest",
       "firefox/10..latest",
       "safari/5.0.5..latest",
       "opera/11.0..latest",
-      "iphone/6", "ipad/6"
+      "iphone/6",
+      "ipad/6"
     ]
   }
 }
