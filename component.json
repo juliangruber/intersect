@@ -2,7 +2,7 @@
   "name": "intersect",
   "repo": "juliangruber/intersect",
   "description": "Find the intersection of two arrays.",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "keywords": [
     "intersect",
     "array"
