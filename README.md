@@ -29,16 +29,15 @@ With [component](https://github.com/component/component) do
 $ component install juliangruber/intersect
 ```
 
-## Two types of intersect
+## Intersections of big arrays
 
-By passing an options object containing a 'big' key with value 'true':
+This module contains an alternative intersection algorithm by @minuteman3, better suited for intersecting big arrays:
 
 ```js
-intersect(a, b, { big: true })
+intersect.big(a, b);
 ```
 
-Intersect can be instructed to utilise an alternate algorithm
-more suitable for calculating the intersection of large sets.
+The implementations *might* compare like this, depending on your host environment:
 
 ![graph of intersect](http://minuteman3.github.io/minuteman3/graph.svg)
 
