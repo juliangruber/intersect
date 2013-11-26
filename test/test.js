@@ -16,8 +16,8 @@ test('big', function (t) {
 test('compliance', function(t) {
   for (var algo in intersect) {
     if (intersect.hasOwnProperty(algo) && typeof intersect[algo] === 'function') {
-      t.deepEqual(intersect([2], [2,2,2]), intersect[algo]([2], [2,2,2]), algo + '-complies-1');
-      t.deepEqual(intersect([2,2,2], [2]), intersect[algo]([2,2,2], [2]), algo + '-complies-2');
+      t.deepEqual(intersect[algo]([2], [2,2,2]), intersect([2], [2,2,2]), algo + '-complies-1');
+      t.deepEqual(intersect[algo]([2,2,2], [2]), intersect([2,2,2], [2]), algo + '-complies-2');
     }
   }
   t.end();
