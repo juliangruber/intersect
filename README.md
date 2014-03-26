@@ -1,6 +1,8 @@
 
 # intersect
 
+[![build status](https://secure.travis-ci.org/juliangruber/intersect.png)](http://travis-ci.org/juliangruber/intersect)
+
 [![browser support](https://ci.testling.com/juliangruber/intersect.png)](https://ci.testling.com/juliangruber/intersect)
 
 ## Usage
