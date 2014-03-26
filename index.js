@@ -10,7 +10,7 @@ function intersect (a, b) {
 
 intersect.big = function(a, b) {
   var ret = [];
-  var temp = {};
+  var temp = Object.create(null);
   
   for (var i = 0; i < b.length; i++) {
     temp[b[i]] = true;
