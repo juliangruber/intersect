@@ -1,7 +1,8 @@
 
 # intersect
 
-[![build status](https://secure.travis-ci.org/juliangruber/intersect.png)](http://travis-ci.org/juliangruber/intersect)
+[![build status](https://secure.travis-ci.org/juliangruber/intersect.svg)](http://travis-ci.org/juliangruber/intersect)
+[![downloads](https://img.shields.io/npm/dm/intersect.svg)](https://www.npmjs.org/package/intersect)
 
 [![browser support](https://ci.testling.com/juliangruber/intersect.png)](https://ci.testling.com/juliangruber/intersect)
 
