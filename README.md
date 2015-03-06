@@ -18,6 +18,17 @@ console.log(intersect(a, b));
 // => ['bar', 'baz']
 ```
 
+intersect many arrays
+
+```js
+var a = ['foo', 'bar', 'baz'];
+var b = ['nope', 'bar', 'baz'];
+var c = ['nope', 'whatever', 'foo', 'baz'];
+
+console.log(intersect([a, b, c]));
+// => ['baz']
+```
+
 ## Installation
 
 With [npm](http://npmjs.org) do
