@@ -32,13 +32,15 @@ With [component](https://github.com/component/component) do
 $ component install juliangruber/intersect
 ```
 
-## Intersections of big arrays
+## API
 
-This module contains an alternative intersection algorithm by @minuteman3, better suited for intersecting big arrays:
+### intersect(a, b)
 
-```js
-intersect.big(a, b);
-```
+Find the intersection of arrays `a` and `b`. The individual arrays are expected to be sets, i.e. there's no duplicate elements in them.
+
+### intersect.big(a, b)
+
+This module contains an alternative intersection algorithm by @minuteman3, better suited for intersecting big arrays.
 
 The implementations *might* compare like this, depending on your host environment:
 
