@@ -18,17 +18,6 @@ console.log(intersect(a, b));
 // => ['bar', 'baz']
 ```
 
-intersect many arrays
-
-```js
-var a = ['foo', 'bar', 'baz'];
-var b = ['nope', 'bar', 'baz'];
-var c = ['nope', 'whatever', 'foo', 'baz'];
-
-console.log(intersect([a, b, c]));
-// => ['baz']
-```
-
 ## Installation
 
 With [npm](http://npmjs.org) do
@@ -48,6 +37,10 @@ $ component install juliangruber/intersect
 ### intersect(a, b)
 
 Find the intersection of arrays `a` and `b`. The individual arrays are expected to be sets, i.e. there's no duplicate elements in them.
+
+### intersect(arrays)
+
+You can also pass an array of arrays as a single argument, to get the intersection of `n` arrays.
 
 ### intersect.big(a, b)
 
