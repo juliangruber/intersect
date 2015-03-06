@@ -1,13 +1,12 @@
 module.exports = intersect;
 
 function many (sets) {
-
-  var o = {}, l = sets.length - 1;
+  var o = {};
+  var l = sets.length - 1;
   var first = sets[0];
   var last = sets[l];
   
-  for(var i in first)
-    o[first[i]] = 0;
+  for(var i in first) o[first[i]] = 0;
   
   for(var i = 1; i <= l; i++) {
     var row = sets[i];
@@ -17,7 +16,7 @@ function many (sets) {
     }
   }
   
-  var a = []
+  var a = [];
   for(var i in last) {
     var key = last[i];
     if(o[key] === l) a.push(key);
@@ -27,7 +26,7 @@ function many (sets) {
 }
 
 function intersect (a, b) {
-  if(!b) return many(a)
+  if (!b) return many(a);
 
   var res = [];
   for (var i = 0; i < a.length; i++) {
@@ -37,7 +36,7 @@ function intersect (a, b) {
 }
 
 intersect.big = function(a, b) {
-  if(!b) return many(a);
+  if (!b) return many(a);
   
   var ret = [];
   var temp = {};
