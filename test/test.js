@@ -24,15 +24,16 @@ test('compliance', function(t) {
 });
 
 test('multiple sets at once', function (t) {
+  [intersect, intersect.big].forEach(function (fn) {
+    t.deepEqual(
+      fn([
+        [1, 2, 3, 4, 6],
+        [2, 4, 5, 6],
+        [2, 5, 6]
+      ]),
+      [2,6]
+    );
+  });
+  t.end();
+});
 
-  t.deepEqual(
-    intersect([
-      [1, 2, 3, 4, 6],
-      [2, 4, 5, 6],
-      [2, 5, 6]
-    ]),
-    [2,6]
-  )
-
-  t.end()
-})
