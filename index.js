@@ -12,7 +12,7 @@ function many (sets) {
     var row = sets[i];
     for(var j in row) {
       var key = row[j];
-      if(o[key] === i - 1) o[key] = i + 1;
+      if(o[key] === i - 1) o[key] = i;
     }
   }
   
