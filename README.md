@@ -9,12 +9,12 @@
 ## Usage
 
 ```js
-import intersect from 'intersect';
+import intersect from 'intersect'
 
-var a = ['foo', 'bar', 'baz'];
-var b = ['nope', 'bar', 'baz'];
+const a = ['foo', 'bar', 'baz']
+const b = ['nope', 'bar', 'baz']
 
-console.log(intersect(a, b));
+console.log(intersect(a, b))
 // => ['bar', 'baz']
 ```
 
