@@ -1,32 +1,24 @@
 const many = sets => {
-  const o = {}
+  if (sets.length === 0) return []
   const l = sets.length - 1
   const first = sets[0]
   const last = sets[l]
 
-  for (const i in first) o[first[i]] = 0
+  const o = Object.fromEntries(first.map(el => [el, 0]))
 
   for (let i = 1; i <= l; i++) {
     const row = sets[i]
-    for (const j in row) {
-      const key = row[j]
-      if (o[key] === i - 1) o[key] = i
+    for (const el of row) {
+      if (o[el] === i - 1) o[el] = i
     }
   }
 
-  const a = []
-  for (const i in last) {
-    const key = last[i]
-    if (o[key] === l) a.push(key)
-  }
-
-  return a
+  return last.filter(el => o[el] === l)
 }
 
 const intersect = (a, b) => {
-  return b
-    ? a.filter(el => b.includes(el))
-    : many(a)
+  if (!b) return many(a)
+  return a.filter(el => b.includes(el))
 }
 
 export default intersect
