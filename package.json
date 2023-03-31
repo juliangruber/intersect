@@ -8,12 +8,12 @@
   },
   "homepage": "https://github.com/juliangruber/intersect",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "tape test/*.js"
   },
-  "dependencies": {},
   "devDependencies": {
-    "tape": "^4.6.0"
+    "tape": "^5.6.3"
   },
   "keywords": [
     "intersect",

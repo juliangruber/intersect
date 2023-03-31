@@ -1,5 +1,5 @@
-var test = require('tape');
-var intersect = require('..');
+import test from 'tape';
+import intersect, { big } from '../index.js';
 
 test('intersect', function (t) {
   t.deepEqual(intersect([1], [2]), [], 'empty');
@@ -8,8 +8,8 @@ test('intersect', function (t) {
 });
 
 test('big', function (t) {
-  t.deepEqual(intersect.big([1], [2]), [], 'empty');
-  t.deepEqual(intersect.big([1, 2], [2]), [2], 'intersection');
+  t.deepEqual(big([1], [2]), [], 'empty');
+  t.deepEqual(big([1, 2], [2]), [2], 'intersection');
   t.end();
 });
 
@@ -24,7 +24,7 @@ test('compliance', function(t) {
 });
 
 test('multiple sets at once', function (t) {
-  [intersect, intersect.big].forEach(function (fn) {
+  [intersect, big].forEach(function (fn) {
     t.deepEqual(
       fn([
         [1, 2, 3, 4, 6],

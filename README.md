@@ -9,7 +9,7 @@
 ## Usage
 
 ```js
-var intersect = require('intersect');
+import intersect from 'intersect';
 
 var a = ['foo', 'bar', 'baz'];
 var b = ['nope', 'bar', 'baz'];

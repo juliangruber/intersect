@@ -1,4 +1,4 @@
-var intersect = require('./');
+import intersect from './index.js';
 
 var a = [];
 var b = [];

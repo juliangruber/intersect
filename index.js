@@ -1,4 +1,4 @@
-module.exports = intersect;
+export default intersect;
 
 function many (sets) {
   var o = {};
@@ -35,7 +35,7 @@ function intersect (a, b) {
   return res;
 }
 
-intersect.big = function(a, b) {
+export const big = function(a, b) {
   if (!b) return many(a);
   
   var ret = [];
