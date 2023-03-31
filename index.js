@@ -1,13 +1,12 @@
 const many = sets => {
   if (sets.length === 0) return []
+
   const l = sets.length - 1
   const first = sets[0]
   const last = sets[l]
-
   const o = Object.fromEntries(first.map(el => [el, 0]))
 
-  for (let i = 1; i <= l; i++) {
-    const row = sets[i]
+  for (const [i, row] of sets.entries()) {
     for (const el of row) {
       if (o[el] === i - 1) o[el] = i
     }
