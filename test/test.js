@@ -1,19 +1,19 @@
 import test from 'tape'
 import intersect, { big } from '../index.js'
 
-test('intersect', function (t) {
+test('intersect', t => {
   t.deepEqual(intersect([1], [2]), [], 'empty')
   t.deepEqual(intersect([1, 2], [2]), [2], 'intersection')
   t.end()
 })
 
-test('big', function (t) {
+test('big', t => {
   t.deepEqual(big([1], [2]), [], 'empty')
   t.deepEqual(big([1, 2], [2]), [2], 'intersection')
   t.end()
 })
 
-test('compliance', function (t) {
+test('compliance', t => {
   for (const algo in intersect) {
     if (typeof intersect[algo] === 'function') {
       t.deepEqual(intersect[algo]([2], [2, 2, 2]), intersect([2], [2, 2, 2]), algo + '-complies-1')
@@ -23,8 +23,8 @@ test('compliance', function (t) {
   t.end()
 })
 
-test('multiple sets at once', function (t) {
-  [intersect, big].forEach(function (fn) {
+test('multiple sets at once', t => {
+  [intersect, big].forEach(fn => {
     t.deepEqual(
       fn([
         [1, 2, 3, 4, 6],

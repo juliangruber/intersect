@@ -1,6 +1,4 @@
-export default intersect
-
-function many (sets) {
+const many = sets => {
   const o = {}
   const l = sets.length - 1
   const first = sets[0]
@@ -25,7 +23,7 @@ function many (sets) {
   return a
 }
 
-function intersect (a, b) {
+const intersect = (a, b) => {
   if (!b) return many(a)
 
   const res = []
@@ -35,7 +33,9 @@ function intersect (a, b) {
   return res
 }
 
-export const big = function (a, b) {
+export default intersect
+
+export const big = (a, b) => {
   if (!b) return many(a)
 
   const ret = []
@@ -51,7 +51,7 @@ export const big = function (a, b) {
   return ret
 }
 
-function indexOf (arr, el) {
+const indexOf = (arr, el) => {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === el) return i
   }
