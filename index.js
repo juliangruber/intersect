@@ -24,36 +24,15 @@ const many = sets => {
 }
 
 const intersect = (a, b) => {
-  if (!b) return many(a)
-
-  const res = []
-  for (let i = 0; i < a.length; i++) {
-    if (indexOf(b, a[i]) > -1) res.push(a[i])
-  }
-  return res
+  return b
+    ? a.filter(el => b.includes(el))
+    : many(a)
 }
 
 export default intersect
 
 export const big = (a, b) => {
   if (!b) return many(a)
-
-  const ret = []
-  const temp = {}
-
-  for (let i = 0; i < b.length; i++) {
-    temp[b[i]] = true
-  }
-  for (let i = 0; i < a.length; i++) {
-    if (temp[a[i]]) ret.push(a[i])
-  }
-
-  return ret
-}
-
-const indexOf = (arr, el) => {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === el) return i
-  }
-  return -1
+  const index = Object.fromEntries(b.map(el => [el, true]))
+  return a.filter(el => index[el])
 }
